@@ -33,7 +33,7 @@ services:
     ports:
       - '8081:8080'
     volumes:
-      - ./trino/coordinator/etc:/etc/trino
+      - /opt/datalake/trino/coordinator/etc:/etc/trino
     healthcheck:
       test: "curl -f http://localhost:8080/v1/status"
       interval: 15s
