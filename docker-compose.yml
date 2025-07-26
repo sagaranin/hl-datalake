@@ -48,7 +48,7 @@ services:
     volumes:
       - /opt/datalake/trino/worker1/etc:/etc/trino
     healthcheck:
-      test: "curl -f http://trino-coordinator:8080/v1/status"
+      test: "curl -f http://localhost:8080/v1/status"
       interval: 15s
       retries: 3
     networks:
@@ -61,7 +61,7 @@ services:
     volumes:
       - /opt/datalake/trino/worker2/etc:/etc/trino
     healthcheck:
-      test: "curl -f http://trino-coordinator:8080/v1/status"
+      test: "curl -f http://localhost:8080/v1/status"
       interval: 15s
       retries: 3
     networks:
