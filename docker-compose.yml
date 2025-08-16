@@ -45,7 +45,7 @@ services:
     image: 'trinodb/trino:latest'
     restart: always
     deploy:
-      replicas: 3
+      replicas: 4
     volumes:
       - /opt/datalake/trino/worker/etc:/etc/trino
     healthcheck:
