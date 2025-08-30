@@ -49,7 +49,7 @@ services:
     image: 'trinodb/trino:latest'
     restart: always
     deploy:
-      replicas: 4
+      replicas: 3
       resources:
         limits:
           cpus: '16'
