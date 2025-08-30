@@ -38,6 +38,10 @@ services:
       test: "curl -f http://localhost:8080/v1/status"
       interval: 15s
       retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '16'
     networks:
       - iceberg_net
 
@@ -46,6 +50,9 @@ services:
     restart: always
     deploy:
       replicas: 4
+      resources:
+        limits:
+          cpus: '16'
     volumes:
       - /opt/datalake/trino/worker/etc:/etc/trino
     healthcheck:
